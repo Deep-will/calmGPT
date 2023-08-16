@@ -13,7 +13,8 @@ export async function POST(req: Request) {
   const { messages } = await req.json()
 
   const response = Hf.textGenerationStream({
-    model: 'OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5',
+    // model: 'OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5',
+    model: 'AtomEchoAI/AtomGPT_56k_chat_4bit',
     inputs: experimental_buildOpenAssistantPrompt(messages),
     parameters: {
       max_new_tokens: 200,
