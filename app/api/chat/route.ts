@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json()
 
   const response = Hf.textGenerationStream({
-    model: 'IDEA-CCNL/Ziya-LLaMA-13B-v1',
+    model: 'THUDM/chatglm2-6b',
     inputs: experimental_buildOpenAssistantPrompt(messages),
     parameters: {
       max_new_tokens: 200,
