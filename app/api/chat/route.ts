@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
   const response = Hf.textGenerationStream({
     // model: 'OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5',
-    model: 'THUDM/chatglm-6b',
+    model: 'FlagAlpha/Llama2-Chinese-7b-Chat-LoRA',
     inputs: experimental_buildOpenAssistantPrompt(messages),
     parameters: {
       max_new_tokens: 200,
